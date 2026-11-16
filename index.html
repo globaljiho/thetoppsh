@@ -169,8 +169,8 @@
             word-break: keep-all;
         }
         .hero-video-wrapper {
-            max-width: 800px;
-            margin: 40px auto 0 auto;
+            max-width: 560px;
+            margin: 35px auto 0 auto;
             width: 100%;
         }
         .section-title {
@@ -254,18 +254,17 @@
         }
         .video-container {
             width: 100%;
+            aspect-ratio: 8.5 / 6;
             border-radius: 12px;
             border: 1px solid var(--border-color);
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             background: var(--bg-card);
             overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
         .video-container video {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
             display: block;
             border-radius: 12px;
         }
@@ -432,7 +431,7 @@
                 <a href="https://open.kakao.com/me/pa3412ho" target="_blank" class="cta-btn" style="font-size: 1rem; padding: 12px 28px;">함께 성장할 파트너 지원하기</a>
             </div>
             
-            <!-- 영상 영역 (원본 비율 유지, 잘림 없음) -->
+            <!-- 영상 영역 (8.5 : 6 비율 고정, 상하 검은 여백 잘라냄) -->
             <div class="hero-video-wrapper">
                 <div class="video-container">
                     <video controls autoplay muted loop playsinline>
